@@ -2,9 +2,11 @@
 import express, { urlencoded, json } from "express";
 import cors from "cors";
 import MatchController from "./cricket_match/controller.js";
-
+import dotenv from "dotenv";
 import { connect } from "./utils/db.js";
 const app = express();
+dotenv.config();
+
 
 app.use(json());
 app.use(urlencoded({ extended: true }));
