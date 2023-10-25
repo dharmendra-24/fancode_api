@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-export const connect = (url = ProcessingInstruction.env.MONGO_URL) => {
+export const connect = (url = process.env.MONGO_URL) => {
   return mongoose
     .connect(url, {
       useUnifiedTopology: true,
